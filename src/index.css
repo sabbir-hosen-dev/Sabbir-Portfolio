@@ -13,3 +13,7 @@ body{
 .links{
   @apply hover:text-primaryP transition-colors duration-300 ease-linear
 }
+
+section{
+  @apply my-20 ;
+}

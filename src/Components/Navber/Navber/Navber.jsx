@@ -41,9 +41,9 @@ function Navbar({ openMenu, setMenu }) {
     <nav
       className={`${
         isSticky
-          ? 'backdrop-blur-lg shadow-lg fixed border-b border-gray-200 '
+          ? 'backdrop-blur-lg shadow-lg fixed border-b border-violet-600  '
           : ''
-      } top-0 left-0 w-full z-50 shadow-sm  transition-all`}>
+      } top-0 left-0 w-full z-50 shadow-sm  border-violet-600  transition-all`}>
       <div className="wrap">
         <div className="">
           <div className="wrap flex flex-wrap items-center justify-between mx-auto p-4">
@@ -75,8 +75,11 @@ function Navbar({ openMenu, setMenu }) {
               className={`${
                 openMenu ? 'block' : 'hidden'
               } w-full lg:block lg:w-auto`}>
-              <ul className="font-medium flex flex-col justify-center items-center lg:border-0 p-4 lg:p-0 lg:px-4 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 text-text gap-3 ">
+              <ul className="font-medium flex flex-col justify-center items-center lg:border-0 p-4 lg:p-0 lg:px-4 mt-4 border-b border-primaryP/40 rounded-lg  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 text-text gap-3 ">
                 {links}
+               <div className="block lg:hidden">
+               <Btn text="Resume" />
+               </div>
               </ul>
               <div className=" lg:hidden flex flex-col gap-3">
                 {/* <div
@@ -90,7 +93,7 @@ function Navbar({ openMenu, setMenu }) {
                     <BiSun className="links" />
                   )}
                 </div> */}
-                <Btn text="Resume" />
+                
               </div>
             </div>
             <div className=" hidden lg:flex items-center gap-3">

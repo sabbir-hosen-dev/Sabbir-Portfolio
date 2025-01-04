@@ -11,7 +11,7 @@ export default {
         textT: "rgba(var(--textT))",
         primaryP: "rgba(var(--primaryP))",
         inputI: "rgba(var(--inputI))",
-        blogB: "rgba(var(--blogG))",
+        boxB: "rgba(var(--boxB))",
         cardC: "rgba(var(--cardC))"
       },
       fontFamily : {
