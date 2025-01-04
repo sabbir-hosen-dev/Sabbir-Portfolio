@@ -41,7 +41,7 @@ function Navbar({ openMenu, setMenu }) {
     <nav
       className={`${
         isSticky
-          ? 'backdrop-blur-lg shadow-lg fixed border-b border-violet-600  '
+          ? 'backdrop-blur-lg shadow-lg fixed border-b border-violet-950  '
           : ''
       } top-0 left-0 w-full z-50 shadow-sm  border-violet-600 duration-500  ease-in-out  transition-all`}>
       <div className="wrap">

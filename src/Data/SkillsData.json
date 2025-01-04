@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "img": "https://img.icons8.com/color/48/000000/html-5.png",
+    "title": "HTML"
+  },
+  {
+    "id": 2,
+    "img": "https://img.icons8.com/color/48/000000/css3.png",
+    "title": "CSS"
+  },
+  {
+    "id": 3,
+    "img": "https://img.icons8.com/color/48/000000/javascript.png",
+    "title": "JavaScript"
+  },
+  {
+    "id": 4,
+    "img": "https://img.icons8.com/color/48/000000/tailwindcss.png",
+    "title": "Tailwind CSS"
+  },
+  {
+    "id": 5,
+    "img": "https://img.icons8.com/color/48/000000/bootstrap.png",
+    "title": "Bootstrap"
+  },
+  {
+    "id": 6,
+    "img": "https://img.icons8.com/color/48/000000/react-native.png",
+    "title": "React"
+  },
+  {
+    "id": 7,
+    "img": "https://img.icons8.com/color/48/000000/mongodb.png",
+    "title": "MongoDB"
+  },
+  {
+    "id": 8,
+    "img": "https://img.icons8.com/color/48/000000/firebase.png",
+    "title": "Firebase"
+  },
+  {
+    "id": 9,
+    "img": "https://img.icons8.com/color/48/000000/redux.png",
+    "title": "Redux"
+  },
+  {
+    "id": 10,
+    "img": "https://img.icons8.com/color/48/000000/git.png",
+    "title": "Git"
+  },
+  {
+    "id": 11,
+    "img": "https://img.icons8.com/color/48/000000/figma.png",
+    "title": "Figma"
+  },
+
+  {
+    "id": 14,
+    "img": "https://img.icons8.com/color/48/000000/visual-studio-code-2019.png",
+    "title": "VS Code"
+  },
+  {
+    "id": 15,
+    "img": "https://img.icons8.com/color/48/000000/material-ui.png",
+    "title": "Material UI"
+  }
+]

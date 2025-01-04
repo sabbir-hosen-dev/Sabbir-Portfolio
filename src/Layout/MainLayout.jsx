@@ -1,20 +1,17 @@
 import { useState } from 'react';
 import Navbar from '../Components/Navber/Navber/Navber';
-import Banner from '../Pages/Home/Banner/Banner';
 import Footer from '../Components/Footer/Footer';
-import AboutMe from '../Pages/Home/AboutMe/AboutMe';
+import { Outlet } from 'react-router-dom';
 
 function MainLaout() {
   const [openMenu, setMenu] = useState(false);
   return (
-    < >
+    <>
       <Navbar openMenu={openMenu} setMenu={setMenu} />
       <div onClick={() => setMenu(false)}>
-        <Banner />
-      <AboutMe />
-      <Footer />
+        <Outlet />
+        <Footer />
       </div>
-      
     </>
   );
 }
