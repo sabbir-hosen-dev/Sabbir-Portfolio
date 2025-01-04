@@ -1,0 +1,32 @@
+:root{
+  --textT: 241, 247, 247;
+  --bgB: 0, 9,3;
+  --secondaryS: 0, 0, 0;
+  --primaryP: 39, 195, 147;
+  --inputI: 55,65,81;
+  --blogB: 17, 24, 39;
+  --cardD: 41, 52, 72;
+}
+
+.light {
+  --textT: 241, 247, 247;
+  --bgB: 0, 9,3;
+  --secondaryS: 0, 0, 0;
+  --primaryP: 39, 195, 147;
+  --inputI: 55,65,81;
+  --blogB: 17, 24, 39;
+  --cardD: 41, 52, 72;
+}
+
+.dark {
+  --textT: 241, 247, 247;
+  --bgB: 2, 6, 23;
+  --secondaryS: 0, 0, 0;
+  --primaryP: 39, 195, 147;
+  --inputI: 55,65,81;
+  --blogB: 17, 24, 39;
+  --cardD: 41, 52, 72;
+}
+
+/* rgb(2, 6, 23)*/
+/* rgb(41, 52, 72)*/
