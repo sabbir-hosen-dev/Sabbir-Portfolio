@@ -1,7 +1,7 @@
 // import { BiSun } from 'react-icons/bi';
 // import { BiMoon } from 'react-icons/bi';
 import { useState, useEffect} from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // import { ThemeContext } from '../../../Context/ThemeContext';
 
 import logo from '../../../assets/slogo.png';
@@ -25,9 +25,9 @@ function Navbar({ openMenu, setMenu }) {
 
   const links = (
     <>
-      <NavLink onClick={() => setMenu(false)} href="#about" className="links">
+      <a onClick={() => setMenu(false)} href="#about" className="links">
         ABOUT ME
-      </NavLink>
+      </a>
       <a onClick={() => setMenu(false)} href="#skills" className="links">
         SKILLS
       </a>
@@ -43,7 +43,7 @@ function Navbar({ openMenu, setMenu }) {
         isSticky
           ? 'backdrop-blur-lg shadow-lg fixed border-b border-violet-600  '
           : ''
-      } top-0 left-0 w-full z-50 shadow-sm  border-violet-600  transition-all`}>
+      } top-0 left-0 w-full z-50 shadow-sm  border-violet-600 duration-500  ease-in-out  transition-all`}>
       <div className="wrap">
         <div className="">
           <div className="wrap flex flex-wrap items-center justify-between mx-auto p-4">
@@ -52,9 +52,9 @@ function Navbar({ openMenu, setMenu }) {
             </Link>
             <button
               onClick={() => setMenu(!openMenu)}
-              className="inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-text rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-50 hover:text-text/70 dark:hover:text-black"
+              className="inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-text rounded-lg lg:hidden hover:bg-boxB focus:outline-none focus:ring-2 focus:ring-primaryP dark:focus:primaryP hover:text-textT/70 "
               aria-expanded={openMenu}>
-              <span className="sr-only">Open main menu</span>
+              {/* <span className="sr-only">Open main menu</span> */}
               <svg
                 className="w-5 h-5"
                 aria-hidden="true"

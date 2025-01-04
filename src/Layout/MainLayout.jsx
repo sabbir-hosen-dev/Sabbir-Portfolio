@@ -7,12 +7,15 @@ import AboutMe from '../Pages/Home/AboutMe/AboutMe';
 function MainLaout() {
   const [openMenu, setMenu] = useState(false);
   return (
-    <div onClick={() => setMenu(false)}>
+    < >
       <Navbar openMenu={openMenu} setMenu={setMenu} />
-      <Banner />
+      <div onClick={() => setMenu(false)}>
+        <Banner />
       <AboutMe />
       <Footer />
-    </div>
+      </div>
+      
+    </>
   );
 }
 

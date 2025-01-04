@@ -4,7 +4,7 @@ import mypic from '../../../assets/mypicture.png';
 
 function AboutMe() {
   return (
-    <section>
+    <section id='about'>
       <div className="wrap">
         <Heading title="About Me" />
 
