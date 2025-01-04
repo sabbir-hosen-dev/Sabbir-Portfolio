@@ -5,7 +5,7 @@ import skills from '../../../Data/SkillsData.json';
 function Skills() {
   return (
     <section>
-      <div>
+      <div className='wrap'>
         <Heading title="Skills" />
         <Marquee
         pauseOnHover="true"
