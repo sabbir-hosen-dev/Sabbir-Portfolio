@@ -99,7 +99,7 @@ const Contact = () => {
               />
               <SocialIcon href="https://www.facebook.com/sabbir.hosen.dev" icon={<FaFacebook />} />
               <SocialIcon
-                href="https://wa.me/01313530719"
+                href="https://wa.me/+8801313530719"
                 icon={<FaWhatsapp />}
               />
             </div>

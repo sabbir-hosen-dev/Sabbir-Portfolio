@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Gadget Heaven",
+    "tools": ["React", "Tailwind CSS", "Netlify"],
+    "description": "A responsive e-commerce platform where users can browse and purchase gadgets.",
+    "image": "https://example.com/images/gadget-heaven.png",
+    "githubLink": "https://github.com/username/gadget-heaven",
+    "liveLink": "https://gadget-heaven2-a8.netlify.app/"
+  },
+  {
+    "id": 2,
+    "name": "Drogn News Website",
+    "tools": ["React", "Express", "MongoDB", "Tailwind CSS"],
+    "description": "A dynamic news website that provides real-time updates on various topics.",
+    "image": "https://example.com/images/drogn-news.png",
+    "githubLink": "https://github.com/username/drogn-news-website",
+    "liveLink": "https://drogn-news-website.com"
+  },
+  {
+    "id": 3,
+    "name": "G3 Architects",
+    "tools": ["React", "Node.js", "MongoDB"],
+    "description": "A portfolio website showcasing architectural designs and services.",
+    "image": "https://example.com/images/g3-architects.png",
+    "githubLink": "https://github.com/username/g3-architects",
+    "liveLink": "https://g3-architects.com"
+  }
+]
