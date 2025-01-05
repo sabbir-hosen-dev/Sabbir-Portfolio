@@ -1,14 +1,16 @@
-import { BsFacebook } from "react-icons/bs"; 
-import { AiFillLinkedin } from "react-icons/ai"; 
-import { AiFillGithub } from "react-icons/ai"; 
+import { BsWhatsapp } from 'react-icons/bs';
+import { BsFacebook } from 'react-icons/bs';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 function BannerLeft() {
   return (
     <div>
       <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
         <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
           Hello, <br />
-          This is <span className="text-pink-500">Sabbir Hosen</span> <br /> I&apos;m a
-          
+          This is <span className="text-pink-500">
+            Sabbir Hosen
+          </span> <br /> I&apos;m a
           <span className="text-[#16f2b3]"> Web Developer</span>.
         </h1>
         <div className="my-4 flex items-center gap-5">
@@ -18,7 +20,7 @@ function BannerLeft() {
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://github.com/sabbir-hosen-dev">
             {/* GitHub Icon */}
-           <AiFillGithub className="text-4xl" />
+            <AiFillGithub className="text-4xl" />
           </a>
           <a
             target="_blank"
@@ -34,9 +36,16 @@ function BannerLeft() {
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://www.linkedin.com/in/sabbir-hosen-dev/">
             {/* LinkedIn Icon */}
-            <BsFacebook  className="text-4xl" />
+            <BsFacebook className="text-4xl" />
           </a>
-          
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-all text-pink-500 hover:scale-125 duration-300"
+            href="https://wa.me/+8801313530719">
+            {/* LinkedIn Icon */}
+            <BsWhatsapp className="text-4xl" />
+          </a>
         </div>
         <div className="flex items-center gap-3">
           <a
@@ -61,7 +70,7 @@ function BannerLeft() {
             role="button"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing">
+            href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing">
             <span>Get Resume</span>
             <svg
               stroke="currentColor"

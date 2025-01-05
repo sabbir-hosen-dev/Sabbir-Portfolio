@@ -1,7 +1,7 @@
 // import { BiSun } from 'react-icons/bi';
 // import { BiMoon } from 'react-icons/bi';
-import { useState, useEffect} from 'react';
-import { Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // import { ThemeContext } from '../../../Context/ThemeContext';
 
 import logo from '../../../assets/slogo.png';
@@ -77,9 +77,12 @@ function Navbar({ openMenu, setMenu }) {
               } w-full lg:block lg:w-auto`}>
               <ul className="font-medium flex flex-col justify-center items-center lg:border-0 p-4 lg:p-0 lg:px-4 mt-4 border-b border-primaryP/40 rounded-lg  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 text-text gap-3 ">
                 {links}
-               <div className="block lg:hidden">
-               <Btn text="Resume" />
-               </div>
+                <a
+                  className="block lg:hidden"
+                  target='_blank'
+                  href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing">
+                  <Btn text="Resume" />
+                </a>
               </ul>
               <div className=" lg:hidden flex flex-col gap-3">
                 {/* <div
@@ -93,7 +96,6 @@ function Navbar({ openMenu, setMenu }) {
                     <BiSun className="links" />
                   )}
                 </div> */}
-                
               </div>
             </div>
             <div className=" hidden lg:flex items-center gap-3">
@@ -108,7 +110,9 @@ function Navbar({ openMenu, setMenu }) {
                   <BiSun className="links" />
                 )}
               </div> */}
-              <Btn text="Resume" />
+              <a target='_blank'  href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing">
+              <Btn text="Resume" /></a>
+             
             </div>
           </div>
         </div>

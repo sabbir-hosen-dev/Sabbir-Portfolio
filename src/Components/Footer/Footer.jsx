@@ -1,3 +1,4 @@
+import { AiOutlineWhatsApp } from "react-icons/ai"; 
 import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
 import logo from '../../assets/slogo.png';
 
@@ -37,6 +38,13 @@ const Footer = () => {
              className="transition-all text-pink-500 hover:scale-125 duration-300"
               href="https://www.facebook.com/sabbir.hosen.dev">
               <AiFillFacebook className="text-4xl" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+             className="transition-all text-pink-500 hover:scale-125 duration-300"
+             href="https://wa.me/+8801313530719">
+              <AiOutlineWhatsApp  className="text-4xl" />
             </a>
           </div>
         </div>
