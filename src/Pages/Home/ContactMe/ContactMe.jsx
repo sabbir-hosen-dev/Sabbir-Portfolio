@@ -16,8 +16,6 @@ import toast, { Toaster } from 'react-hot-toast';
 const Contact = () => {
   const [errors, setErrors] = useState({});
 
-
-
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -46,19 +44,19 @@ const Contact = () => {
         .sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form, // 'form' should be the form element from the event
+          form, // Pass the form element
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
-
         .then(
           () => {
-            toast.success("Message Sent!");
+            toast.success(`Thank you, ${name}! Your message has been sent.`);
+
+            form.reset(); // Clear the form
           },
           error => {
-            toast.error('FAILED...', error.text);
+            toast.error(`Message failed to send: ${error.text}`);
           }
         );
-      form.reset(); // Clear the form
     }
   };
 
@@ -84,12 +82,15 @@ const Contact = () => {
                 <div className="flex flex-col gap-2">
                   <label className="text-base">Your Name: </label>
                   <input
-                    className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] px-3 py-2"
+                    className={`bg-[#10172d] w-full border rounded-md px-3 py-2 ${
+                      errors.name ? 'border-red-400' : 'border-[#353a52]'
+                    } focus:border-[#16f2b3]`}
                     type="text"
                     maxLength="100"
                     name="name"
                     required
                   />
+
                   {errors.name && (
                     <p className="text-sm text-red-400">{errors.name}</p>
                   )}
