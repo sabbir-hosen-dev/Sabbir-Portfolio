@@ -10,9 +10,16 @@ const ProjectCard = ({ project }) => {
     (description.split(' ').length > 18 ? '...' : '');
   return (
     <div className="rounded-lg border text-card-foreground shadow-sm bg-gray-800/50 border-gray-700 hover:bg-gray-800/80 transition-all duration-300">
-      <div className="img">
-        <img src={image} alt="" />
+      <div className="img overflow-hidden">
+        <Link className='overflow-hidden'>
+          <img
+            src={image}
+            alt="Zoom effect"
+            className="transition-transform rounded-lg duration-300 cursor-pointer ease-in-out hover:scale-110"
+          />
+        </Link>
       </div>
+
       <div className="p-6">
         <div className=" mb-4">
           <h3 className="text-2xl font-semibold text-white">{name}</h3>
