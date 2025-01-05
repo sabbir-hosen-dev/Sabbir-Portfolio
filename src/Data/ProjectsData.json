@@ -1,29 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Gadget Heaven",
-    "tools": ["React", "Tailwind CSS", "Netlify"],
-    "description": "A responsive e-commerce platform where users can browse and purchase gadgets.",
-    "image": "https://example.com/images/gadget-heaven.png",
-    "githubLink": "https://github.com/username/gadget-heaven",
-    "liveLink": "https://gadget-heaven2-a8.netlify.app/"
+    "name": "Rent A Car",
+    "tools": ["React", "Tailwind CSS", "DaisyUI", "Node.js", "MongoDB"],
+    "description": "A modern car rental platform that allows users to browse, book, and manage car rentals efficiently.",
+    "features": [
+      "Browse and search for available cars",
+      "Secure online booking system",
+      "User dashboard to manage bookings",
+      "Admin panel for managing cars and reservations"
+    ],
+    "image": "https://i.ibb.co.com/LYLpwPV/image.png",
+    "githubLink": "https://github.com/sabbir-hosen-dev",
+    "liveLink": "https://rent-car-881ec.web.app/"
   },
   {
     "id": 2,
-    "name": "Drogn News Website",
+    "name": "playRev",
     "tools": ["React", "Express", "MongoDB", "Tailwind CSS"],
     "description": "A dynamic news website that provides real-time updates on various topics.",
-    "image": "https://example.com/images/drogn-news.png",
-    "githubLink": "https://github.com/username/drogn-news-website",
-    "liveLink": "https://drogn-news-website.com"
+    "image": "https://i.ibb.co.com/6J9tp5n/image.png",
+    "githubLink": "https://github.com/sabbir-hosen-dev",
+    "liveLink": "https://playrev-8d039.web.app/"
   },
   {
     "id": 3,
-    "name": "G3 Architects",
-    "tools": ["React", "Node.js", "MongoDB"],
-    "description": "A portfolio website showcasing architectural designs and services.",
-    "image": "https://example.com/images/g3-architects.png",
-    "githubLink": "https://github.com/username/g3-architects",
-    "liveLink": "https://g3-architects.com"
+    "name": "Coffee House",
+    "tools": ["React", "Tailwind CSS", "Firebase"],
+    "description": "A stylish coffee shop website where customers can explore the menu, place orders, and learn more about coffee culture.",
+    "features": [
+      "Interactive menu with filtering options",
+      "Online ordering and payment integration",
+      "Blog section for coffee lovers",
+      "Customer reviews and ratings"
+    ],
+    "image": "https://i.ibb.co.com/6sVNzYL/image.png" ,
+    "githubLink": "https://github.com/sabbir-hosen-dev/coffee-house",
+    "liveLink": "https://coffee-house277.netlify.app/"
   }
 ]
+
