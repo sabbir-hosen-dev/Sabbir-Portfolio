@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
           <h3 className="text-2xl font-semibold text-white">{name}</h3>
           <p>{truncatedDescription}</p>
         </div>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           {tools.map(tool => (
             <div key={tool.id} className="flex flex-wrap gap-2">
               <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-gray-700/50 hover:bg-gray-700 text-gray-100 border-gray-600">
