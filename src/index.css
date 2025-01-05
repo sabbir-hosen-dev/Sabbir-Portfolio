@@ -3,8 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+html {
   scroll-behavior: smooth;
+}
+body{
   transition:.3s all ease;
 }
 .wrap{

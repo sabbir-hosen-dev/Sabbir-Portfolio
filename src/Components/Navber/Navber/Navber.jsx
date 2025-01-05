@@ -34,6 +34,9 @@ function Navbar({ openMenu, setMenu }) {
       <a onClick={() => setMenu(false)} href="#projects" className="links">
         PROJECTS
       </a>
+      <a onClick={() => setMenu(false)} href="#contact" className="links">
+        CONTACT
+      </a>
     </>
   );
 
