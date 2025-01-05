@@ -2,9 +2,10 @@ import Marquee from 'react-fast-marquee';
 import Heading from '../../../Components/Heading/Heading';
 import skills from '../../../Data/SkillsData.json';
 
+
 function Skills() {
   return (
-    <section>
+    <section id='skills'>
       <div className='wrap'>
         <Heading title="Skills" />
         <Marquee
