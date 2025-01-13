@@ -83,7 +83,7 @@ function Navbar({ openMenu, setMenu }) {
                 <a
                   className="block lg:hidden"
                   target='_blank'
-                  href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing">
+                  href="https://docs.google.com/document/d/1KJ26tzCsqVivntzXP8rzTP59L7bbOBnFlaf9p7k0KAg/edit?usp=drive_link">
                   <Btn text="Resume" />
                 </a>
               </ul>
@@ -113,7 +113,7 @@ function Navbar({ openMenu, setMenu }) {
                   <BiSun className="links" />
                 )}
               </div> */}
-              <a target='_blank'  href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing">
+              <a target='_blank'  href="https://docs.google.com/document/d/1KJ26tzCsqVivntzXP8rzTP59L7bbOBnFlaf9p7k0KAg/edit?usp=drive_link">
               <Btn text="Resume" /></a>
              
             </div>
