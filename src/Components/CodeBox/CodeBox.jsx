@@ -35,26 +35,38 @@ function CoadBox() {
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">skills:</span>
             <span className="text-gray-400">['</span>
-            <span className="text-amber-300">Html</span>
+            <span className="text-amber-300">HTML</span>
+
             <span className="text-gray-400">', '</span>
-            <span className="text-amber-300">Css</span>
+            <span className="text-amber-300">CSS</span>
+
             <span className="text-gray-400">', '</span>
             <span className="text-amber-300">Tailwind</span>
+
             <span className="text-gray-400">', '</span>
             <span className="text-amber-300">JavaScript</span>
+
             <span className="text-gray-400">', '</span>
-            <span className="text-amber-300">React</span>
+            <span className="text-amber-300">React.Js</span>
+
             <span className="text-gray-400">', '</span>
             <span className="text-amber-300">Redux</span>
+
             <span className="text-gray-400">', '</span>
             <span className="text-amber-300">Firebase</span>
+
             <span className="text-gray-400">', '</span>
-            <span className="text-amber-300">Node</span>
+            <span className="text-amber-300">Node.js</span>
+
             <span className="text-gray-400">', '</span>
-            <span className="text-amber-300">Express</span>
+            <span className="text-amber-300">Express.Js</span>
 
             <span className="text-gray-400">', '</span>
             <span className="text-amber-300">MongoDB</span>
+
+            <span className="text-gray-400">', '</span>
+            <span className="text-amber-300">Next.js</span>
+
             <span className="text-gray-400">'],</span>
           </div>
           <div>
@@ -68,7 +80,7 @@ function CoadBox() {
             <span className="text-gray-400">,</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">teamPlayer:</span>
             <span className="text-orange-400">true</span>
             <span className="text-gray-400">,</span>
           </div>
@@ -88,7 +100,12 @@ function CoadBox() {
           </div>
           <div>
             <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-            <span className="mr-2 text-white">problemSolver</span>
+            <span className="mr-2 text-white">quickLearner</span>
+            <span className="text-amber-300">&amp;&amp;</span>
+          </div>
+          <div>
+            <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
+            <span className="mr-2 text-white">teamPlayer</span>
             <span className="text-amber-300">&amp;&amp;</span>
           </div>
           <div>
