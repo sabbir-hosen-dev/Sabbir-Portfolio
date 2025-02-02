@@ -35,9 +35,9 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <div className="flex justify-between items-center mt-4">
-          <Link className="text-emerald-400 hover:opacity-50 transition-all duration-300 text-sm font-mono mb-2 tracking-wide uppercase">
+          {/* <Link className="text-emerald-400 hover:opacity-50 transition-all duration-300 text-sm font-mono mb-2 tracking-wide uppercase">
             View More Details
-          </Link>
+          </Link> */}
           <div className="flex gap-4">
             <a
               href={githubLink}
