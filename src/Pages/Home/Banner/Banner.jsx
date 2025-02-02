@@ -6,7 +6,7 @@ function Banner() {
   return (
     <motion.section
       id="home"
-      className="min-h-[60vh] lg:min-h-[calc(100vh-80.1px)] flex justify-center items-center"
+      className="min-h-[60vh]  flex justify-center items-center"
       initial={{ opacity: 0 }} // Initial state of the component
       animate={{ opacity: 1 }} // Animation to opacity 1 on scroll
       transition={{ duration: 1 }} // Duration of animation

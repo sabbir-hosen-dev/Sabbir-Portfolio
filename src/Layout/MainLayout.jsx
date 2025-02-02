@@ -79,7 +79,7 @@ function MainLayout() {
       <BackgroundDots />
       
       {/* Custom Cursor */}
-      <CustomCursor />
+      {/* <CustomCursor /> */}
 
       {/* Content */}
       <div className="main-layout">
