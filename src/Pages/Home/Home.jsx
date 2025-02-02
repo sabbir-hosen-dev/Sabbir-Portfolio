@@ -1,5 +1,5 @@
-import FeaturedProjects from '../../Components/Projects/FearuredProjects';
-import ProjectsT from '../../Components/Projects/Projdects';
+// import FeaturedProjects from '../../Components/Projects/FearuredProjects';
+// import ProjectsT from '../../Components/Projects/Projdects';
 
 import AboutMe from './AboutMe/AboutMe';
 import Banner from './Banner/Banner';

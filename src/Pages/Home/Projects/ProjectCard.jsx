@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="rounded-lg border text-card-foreground shadow-sm bg-gray-800/50 border-gray-700 hover:bg-gray-800/80 transition-all duration-300">
       <div className="img overflow-hidden">
-        <Link className='overflow-hidden'>
+        <Link className="overflow-hidden">
           <img
             src={image}
             alt="Zoom effect"
@@ -35,23 +35,25 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <div className="flex justify-between items-center mt-4">
-          {/* <Link className="text-emerald-400 hover:opacity-50 transition-all duration-300 text-sm font-mono mb-2 tracking-wide uppercase">
+          <div>
+            {/* <Link className="text-emerald-400 hover:opacity-50 transition-all duration-300 text-sm font-mono mb-2 tracking-wide uppercase">
             View More Details
           </Link> */}
+          </div>
           <div className="flex gap-4">
             <a
               href={githubLink}
               className="text-slate-400 hover:text-emerald-400 transition-all duration-300 transform hover:scale-125"
               target="_blank"
               rel="noopener noreferrer">
-                <RiGithubLine className='text-xl' />
+              <RiGithubLine className="text-xl" />
             </a>
             <a
               href={liveLink}
               className="text-slate-400 hover:text-emerald-400 transition-all duration-300 transform hover:scale-125"
               target="_blank"
               rel="noopener noreferrer">
-                <BiLinkExternal className='text-xl' />
+              <BiLinkExternal className="text-xl" />
             </a>
           </div>
         </div>
