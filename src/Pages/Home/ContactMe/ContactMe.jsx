@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import { useInView } from "react-intersection-observer"; // Import useInView from react-intersection-observer
@@ -74,7 +75,7 @@ const Contact = () => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on inView
       transition={{ duration: 0.8 }}
     >
-      <div className="absolute -z-10">
+      <div className="absolute -z">
         <img src={bg} alt="" />
       </div>
       <div className="wrap pt-14">
