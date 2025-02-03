@@ -14,7 +14,7 @@ const Footer = () => {
 
         {/* Logo and Social Links */}
         <motion.div
-          className="flex flex-col gap-3  md:flex-row items-center justify-between"
+          className="flex gap-3  items-center justify-between"
           initial={{ opacity: 0 }}  // Initial state for opacity
           animate={{ opacity: 1 }}  // Animate to full opacity
           transition={{ duration: 1 }}
@@ -74,14 +74,14 @@ const Footer = () => {
       </div>
 
       {/* Footer Copyright */}
-      <motion.div
+      {/* <motion.div
         className="text-center py-3"
         initial={{ opacity: 0 }}  // Initial opacity for copyright
         animate={{ opacity: 1 }}  // Animate to full opacity
         transition={{ duration: 1, delay: 0.8 }}
       >
         <p>&copy; {new Date().getFullYear()} Sabbir Hosen</p>
-      </motion.div>
+      </motion.div> */}
     </footer>
   );
 };
