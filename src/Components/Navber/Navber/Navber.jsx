@@ -46,11 +46,11 @@ function Navbar({ openMenu, setMenu }) {
         isSticky
           ? 'backdrop-blur-lg shadow-lg fixed border-b border-violet-950  '
           : ''
-      } top-0 left-0 w-full z-50 shadow-sm  border-violet-600 duration-500  ease-in-out  transition-all`}>
+      } top-0 left-0 w-full z-50 shadow-sm border-b   border-violet-950 duration-500  ease-in-out  transition-all`}>
       <div className="wrap">
         <div className="">
           <div className="wrap flex flex-wrap items-center justify-between mx-auto p-4">
-            <Link to="/" className="flex items-center  gap-3">
+            <Link to="/" className="flex items-center min-w-[90px]  gap-3">
               <img className="w-[32px]" src={logo} alt="" />
             </Link>
             <button

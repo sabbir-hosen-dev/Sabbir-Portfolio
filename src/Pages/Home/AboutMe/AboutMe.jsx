@@ -2,16 +2,21 @@ import { motion } from 'framer-motion'; // Import motion from framer-motion
 import Heading from '../../../Components/Heading/Heading';
 import { aboutMe } from '../../../Data/TextData';
 import mypic from '../../../assets/mypicture.png';
+import blur from "../../../assets/blur-23.svg"
 
 function AboutMe() {
   return (
-    <motion.section
+    <div className="relative">
+      <div className="absolute left-0 bottom-0">
+        <img className='w-full h-full  ' src={blur} alt="" />
+      </div>
+          <motion.section
       id='about'
       initial={{ opacity: 0 }} // Start with opacity 0
       animate={{ opacity: 1 }} // Animate to opacity 1
       transition={{ duration: 1 }} // Animation duration
     >
-      <div className="wrap">
+      <div className="wrap pb-14">
         <Heading title="About Me" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -56,6 +61,7 @@ function AboutMe() {
         </div>
       </div>
     </motion.section>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState } from "react";
+import { motion } from "framer-motion"; // Import motion from framer-motion
+import { useInView } from "react-intersection-observer"; // Import useInView from react-intersection-observer
 import {
   FaGithub,
   FaLinkedin,
@@ -8,15 +9,20 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
-} from 'react-icons/fa';
-import Heading from '../../../Components/Heading/Heading';
-import emailjs from 'emailjs-com';
-import toast, { Toaster } from 'react-hot-toast';
+} from "react-icons/fa";
+import Heading from "../../../Components/Heading/Heading";
+import emailjs from "emailjs-com";
+import toast, { Toaster } from "react-hot-toast";
+import bg from "../../../assets/section.svg";
 
 const Contact = () => {
   const [errors, setErrors] = useState({});
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Only trigger the animation once
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  });
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -27,13 +33,13 @@ const Contact = () => {
     // Validation
     const newErrors = {};
     if (name.length < 2) {
-      newErrors.name = 'Name must be at least 2 letters.';
+      newErrors.name = "Name must be at least 2 letters.";
     }
     if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Please provide a valid email.';
+      newErrors.email = "Please provide a valid email.";
     }
-    if (message.split(' ').length < 5) {
-      newErrors.message = 'Message must be at least 5 words.';
+    if (message.split(" ").length < 5) {
+      newErrors.message = "Message must be at least 5 words.";
     }
 
     setErrors(newErrors);
@@ -44,16 +50,15 @@ const Contact = () => {
         .sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form, // Pass the form element
+          form,
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
           () => {
             toast.success(`Thank you, ${name}! Your message has been sent.`);
-
-            form.reset(); // Clear the form
+            form.reset();
           },
-          error => {
+          (error) => {
             toast.error(`Message failed to send: ${error.text}`);
           }
         );
@@ -61,80 +66,67 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
-      <div className="wrap">
+    <motion.section
+      id="contact"
+      className="relative"
+      ref={ref} // Attach the ref here
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on inView
+      transition={{ duration: 0.8 }}
+    >
+      <div className="absolute -z-10">
+        <img src={bg} alt="" />
+      </div>
+      <div className="wrap pt-14">
         <Heading title="Contact Me" />
         <Toaster />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 justify-center items-center">
           {/* Left Side */}
-          <form className="m-auto w-full" onSubmit={handleSubmit}>
+          <motion.form
+            className="m-auto w-full"
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} // Animate based on inView
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
               Contact with me
             </p>
             <div className="text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
               <p className="text-sm text-[#d3d8e8]">
-                If you have any questions or concerns, please don&apos;t
-                hesitate to contact me. I am open to any work opportunities that
-                align with my skills and interests.
+                If you have any questions or concerns, please don&apos;t hesitate
+                to contact me. I am open to any work opportunities that align
+                with my skills and interests.
               </p>
               <div className="mt-6 flex flex-col gap-4">
-                {/* Name Input */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-base">Your Name: </label>
-                  <input
-                    className={`bg-[#10172d] w-full border rounded-md px-3 py-2 ${
-                      errors.name ? 'border-red-400' : 'border-[#353a52]'
-                    } focus:border-[#16f2b3]`}
-                    type="text"
-                    maxLength="100"
-                    name="name"
-                    required
-                  />
-
-                  {errors.name && (
-                    <p className="text-sm text-red-400">{errors.name}</p>
-                  )}
-                </div>
-                {/* Email Input */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-base">Your Email: </label>
-                  <input
-                    className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] px-3 py-2"
-                    type="email"
-                    name="email"
-                    maxLength="100"
-                    required
-                  />
-                  {errors.email && (
-                    <p className="text-sm text-red-400">{errors.email}</p>
-                  )}
-                </div>
-                {/* Message Input */}
-                <div className="flex flex-col gap-2">
-                  <label className="text-base">Your Message: </label>
-                  <textarea
-                    className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] px-3 py-2"
-                    maxLength="500"
-                    name="message"
-                    required
-                    rows="4"></textarea>
-                  {errors.message && (
-                    <p className="text-sm text-red-400">{errors.message}</p>
-                  )}
-                </div>
-                {/* Submit Button */}
-                <div className="flex flex-col items-center gap-3">
-                  <button className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white">
-                    <span className="flex items-center gap-1">
-                      Send Message
-                    </span>
-                  </button>
-                </div>
+                <InputField label="Your Name:" name="name" error={errors.name} />
+                <InputField
+                  label="Your Email:"
+                  name="email"
+                  type="email"
+                  error={errors.email}
+                />
+                <TextAreaField
+                  label="Your Message:"
+                  name="message"
+                  error={errors.message}
+                />
+                <motion.button
+                  className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="flex items-center gap-1">Send Message</span>
+                </motion.button>
               </div>
             </div>
-          </form>
+          </motion.form>
           {/* Right Side */}
-          <div className="">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} // Animate based on inView
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <div className="mt-8 text-[#d3d8e8] text-2xl flex flex-col gap-5">
               <ContactInfo icon={<FaPhoneAlt />} text="+880 1313 530 719" />
               <ContactInfo
@@ -164,28 +156,69 @@ const Contact = () => {
                 icon={<FaWhatsapp />}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
+const InputField = ({ label, name, type = "text", error }) => (
+  <div className="flex flex-col gap-2">
+    <label className="text-base">{label}</label>
+    <input
+      className={`bg-[#10172d] w-full border rounded-md px-3 py-2 ${
+        error ? "border-red-400" : "border-[#353a52]"
+      } focus:border-[#16f2b3]`}
+      type={type}
+      name={name}
+      required
+    />
+    {error && <p className="text-sm text-red-400">{error}</p>}
+  </div>
+);
+
+const TextAreaField = ({ label, name, error }) => (
+  <div className="flex flex-col gap-2">
+    <label className="text-base">{label}</label>
+    <textarea
+      className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] px-3 py-2"
+      name={name}
+      required
+      rows="4"
+    ></textarea>
+    {error && <p className="text-sm text-red-400">{error}</p>}
+  </div>
+);
+
+import PropTypes from 'prop-types';
+
 const SocialIcon = ({ href, icon }) => (
   <a
-    target="_blank"
     href={href}
+    target="_blank"
     rel="noopener noreferrer"
-    className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer">
-    <div className="text-2xl text-white">{icon}</div>
+    className="text-[#d3d8e8] hover:text-[#16f2b3] transition-colors duration-300"
+  >
+    {icon}
   </a>
 );
 
 const ContactInfo = ({ icon, text }) => (
-  <div className="flex items-center gap-3">
-    <div className="text-xl text-[#16f2b3]">{icon}</div>
-    <p>{text}</p>
+  <div className="flex items-center gap-2">
+    {icon}
+    <span>{text}</span>
   </div>
 );
+
+SocialIcon.propTypes = {
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
+};
+
+ContactInfo.propTypes = {
+  icon: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default Contact;
