@@ -33,7 +33,7 @@ function Banner() {
   return (
     <div className="relative">
       <motion.div
-        className="absolute select-none -top-40 opacity-50 -z-20 left-0"
+        className="absolute -top-20 acity-50 -z-20 left-0"
         style={leftBlobStyle}
         initial={{ x: -100, opacity: 0 }} // Initial position and opacity for the left image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
@@ -43,7 +43,7 @@ function Banner() {
       </motion.div>
 
       <motion.div
-        className="absolute select-none -z-20 right-0 -bottom-44"
+        className="absolute  -z-20 right-0 -bottom-44"
         style={rightBlobStyle}
         initial={{ x: 100, opacity: 0 }} // Initial position and opacity for the right image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
