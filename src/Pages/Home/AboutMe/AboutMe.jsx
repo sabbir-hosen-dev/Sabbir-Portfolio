@@ -44,7 +44,7 @@ function AboutMe() {
               {/* Decorative Border Wrapper */}
               <div className="bg-gradient-to-r to-violet-600 from-pink-500 p-[1px] transition-all duration-400 hover:to-pink-500 hover:from-violet-600">
                 {/* Inner Wrapper */}
-                <div className="bg-gray-900 p-1 rounded-lg overflow-hidden">
+                <div className="bg-gray-900 select-none p-1 rounded-lg overflow-hidden">
                   <img
                     alt="Sabbir Hosen"
                     loading="lazy"

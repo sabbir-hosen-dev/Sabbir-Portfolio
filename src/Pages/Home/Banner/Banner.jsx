@@ -8,7 +8,7 @@ function Banner() {
   return (
     <div className="relative">
       <motion.div
-        className="absolute -top-40 opacity-50 -z-20 left-0"
+        className="absolute select-none -top-40 opacity-50 -z-20 left-0"
         initial={{ x: -100, opacity: 0 }} // Initial position and opacity for the left image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
         transition={{ duration: 1 }}
@@ -17,7 +17,7 @@ function Banner() {
       </motion.div>
 
       <motion.div
-        className="absolute -z-20 right-0 -bottom-44"
+        className="absolute select-none -z-20 right-0 -bottom-44"
         initial={{ x: 100, opacity: 0 }} // Initial position and opacity for the right image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
         transition={{ duration: 1 }}

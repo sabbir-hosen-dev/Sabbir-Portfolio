@@ -75,7 +75,7 @@ const Contact = () => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on inView
       transition={{ duration: 0.8 }}
     >
-      <div className="absolute -z">
+      <div className="absolute -z-30">
         <img src={bg} alt="" />
       </div>
       <div className="wrap pt-14">

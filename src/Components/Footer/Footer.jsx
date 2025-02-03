@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { AiOutlineWhatsApp } from "react-icons/ai"; 
 import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
 import logo from '../../assets/slogo.png';
@@ -12,48 +13,75 @@ const Footer = () => {
         </div>
 
         {/* Logo and Social Links */}
-        <div className="flex flex-col gap-3  md:flex-row items-center justify-between">
-          <div>
+        <motion.div
+          className="flex flex-col gap-3  md:flex-row items-center justify-between"
+          initial={{ opacity: 0 }}  // Initial state for opacity
+          animate={{ opacity: 1 }}  // Animate to full opacity
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            initial={{ y: -30, opacity: 0 }}  // Initial position and opacity for logo
+            animate={{ y: 0, opacity: 1 }}  // Animate to original position
+            transition={{ duration: 1, delay: 0.2 }}
+          >
             <img className="w-[30px]" src={logo} alt="Logo" />
-          </div>
+          </motion.div>
 
-          <div className="flex items-center gap-5">
-            <a
+          <motion.div
+            className="flex items-center gap-5"
+            initial={{ opacity: 0 }} // Initial opacity for social links
+            animate={{ opacity: 1 }} // Animate to full opacity
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <motion.a
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
-              href="https://github.com/sabbir-hosen-dev">
+              href="https://github.com/sabbir-hosen-dev"
+              whileHover={{ scale: 1.1 }}  // Scale effect on hover
+            >
               <AiFillGithub className="text-4xl" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
-              href="https://www.linkedin.com/in/sabbir-hosen-dev">
+              href="https://www.linkedin.com/in/sabbir-hosen-dev"
+              whileHover={{ scale: 1.1 }}
+            >
               <AiFillLinkedin className="text-4xl" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               target="_blank"
               rel="noopener noreferrer"
-             className="transition-all text-pink-500 hover:scale-125 duration-300"
-              href="https://www.facebook.com/sabbir.hosen.dev">
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              href="https://www.facebook.com/sabbir.hosen.dev"
+              whileHover={{ scale: 1.1 }}
+            >
               <AiFillFacebook className="text-4xl" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               target="_blank"
               rel="noopener noreferrer"
-             className="transition-all text-pink-500 hover:scale-125 duration-300"
-             href="https://wa.me/+8801313530719">
-              <AiOutlineWhatsApp  className="text-4xl" />
-            </a>
-          </div>
-        </div>
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              href="https://wa.me/+8801313530719"
+              whileHover={{ scale: 1.1 }}
+            >
+              <AiOutlineWhatsApp className="text-4xl" />
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Footer Copyright */}
-      <div className="text-center py-3">
+      <motion.div
+        className="text-center py-3"
+        initial={{ opacity: 0 }}  // Initial opacity for copyright
+        animate={{ opacity: 1 }}  // Animate to full opacity
+        transition={{ duration: 1, delay: 0.8 }}
+      >
         <p>&copy; {new Date().getFullYear()} Sabbir Hosen</p>
-      </div>
+      </motion.div>
     </footer>
   );
 };
