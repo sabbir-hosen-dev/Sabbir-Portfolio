@@ -101,7 +101,7 @@ function BannerLeft() {
             role="button"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1H5-2t4NysEerx1fyaKOI8mUt_GBS2DHq/view?usp=sharing"
+            href="https://drive.google.com/file/d/1HeWJ0vNGGUPAl6iU03JJs6qIApBimSy9/view?usp=drive_link"
             whileHover={{ scale: 1.05 }}
           >
             <span>Get Resume</span>
