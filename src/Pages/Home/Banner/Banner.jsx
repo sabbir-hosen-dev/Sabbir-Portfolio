@@ -1,14 +1,40 @@
-import { motion } from 'framer-motion'; 
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import CoadBox from '../../../Components/CodeBox/CodeBox';
 import BannerLeft from './BannerLeft';
 import leftImg from '../../../assets/pattern-l.svg';
 import rightImg from '../../../assets/pattern-r.svg';
 
 function Banner() {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+  // Update cursor position on mousemove
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setCursorPosition({ x: clientX, y: clientY });
+  };
+
+  // Adding event listener for mouse movement
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const leftBlobStyle = {
+    transform: `translate(${(cursorPosition.x - window.innerWidth / 2) / 20}px, ${(cursorPosition.y - window.innerHeight / 2) / 20}px)`,
+  };
+
+  const rightBlobStyle = {
+    transform: `translate(${(cursorPosition.x - window.innerWidth / 2) / 20}px, ${(cursorPosition.y - window.innerHeight / 2) / 20}px)`,
+  };
+
   return (
     <div className="relative">
       <motion.div
         className="absolute select-none -top-40 opacity-50 -z-20 left-0"
+        style={leftBlobStyle}
         initial={{ x: -100, opacity: 0 }} // Initial position and opacity for the left image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
         transition={{ duration: 1 }}
@@ -18,6 +44,7 @@ function Banner() {
 
       <motion.div
         className="absolute select-none -z-20 right-0 -bottom-44"
+        style={rightBlobStyle}
         initial={{ x: 100, opacity: 0 }} // Initial position and opacity for the right image
         animate={{ x: 0, opacity: 1 }} // Animate to position 0 with full opacity
         transition={{ duration: 1 }}

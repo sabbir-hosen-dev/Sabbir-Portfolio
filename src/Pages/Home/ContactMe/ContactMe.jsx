@@ -78,7 +78,7 @@ const Contact = () => {
       <div className="absolute -z-30">
         <img src={bg} alt="" />
       </div>
-      <div className="wrap pt-14">
+      <div className="wrap py-20">
         <Heading title="Contact Me" />
         <Toaster />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 justify-center items-center">

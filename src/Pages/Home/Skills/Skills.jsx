@@ -5,7 +5,7 @@ import skills from '../../../Data/SkillsData.json';
 
 function Skills() {
   return (
-    <section id='skills'>
+    <section id='skills' className='py-14'>
       <div className='wrap'>
         <Heading title="Skills" />
         <Marquee

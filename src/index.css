@@ -17,9 +17,7 @@ body{
   @apply hover:text-primaryP transition-colors duration-300 ease-linear
 }
 
-section{
-  @apply my-20 ;
-}
+
 .tec{
   @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
 }
