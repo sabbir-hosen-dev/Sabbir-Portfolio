@@ -6,7 +6,7 @@ import blur from "../../../assets/blur-23.svg"
 
 function AboutMe() {
   return (
-    <div className="relative">
+    <div className="relative pt-20">
       <div className="absolute left-0 bottom-0">
         <img className='w-full h-full  ' src={blur} alt="" />
       </div>
