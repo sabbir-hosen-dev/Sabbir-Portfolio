@@ -29,7 +29,7 @@ const Contact = () => {
     const form = e.target;
     const name = form.name.value.trim();
     const email = form.email.value.trim();
-    const message = form.message.value.trim();
+    // const message = form.message.value.trim();
 
     // Validation
     const newErrors = {};
