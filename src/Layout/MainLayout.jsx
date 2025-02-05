@@ -51,41 +51,34 @@ function CustomCursor() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const cursorSize = 20;
+
 
   return (
     <div className="fixed w-screen h-screen">
-    {/* Blob moves with the cursor */}
+    {/* Blob follows the cursor */}
     <motion.div
       className="fixed"
       style={{
-        width: "10px",
-        height: "10px",
-        backgroundColor: "rgba(79, 240, 183, 0.4)", // Soft green glow
+        width: `${cursorSize * 2}px`, // Blob size
+        height: `${cursorSize * 2}px`,
+        backgroundColor: "rgba(79, 240, 183, 0.7)", // Soft green glow
         borderRadius: "50%",
         position: "absolute",
-        top: cursorPosition.y - 75, // Offset to center blob around cursor
-        left: cursorPosition.x - 75,
-        filter: "blur(30px)", // Glowing effect
+        filter: "blur(80px)", // Glowing effect
         pointerEvents: "none",
       }}
-      animate={{ x: cursorPosition.x - window.innerWidth / 2, y: cursorPosition.y - window.innerHeight / 2 }}
-      transition={{ type: "spring", stiffness: 100, damping: 10 }}
-    />
-
-    {/* Pointer stays at the exact center of the blob */}
-    {/* <motion.div
-      className="fixed"
-      style={{
-        width: "10px",
-        height: "10px",
-        backgroundColor: "white", // Pointer color
-        borderRadius: "50%", // Small dot
-        position: "absolute",
-        top: cursorPosition.y - 5, // Centering pointer
-        left: cursorPosition.x - 5,
-        zIndex: 10, // Above the blob
+      animate={{
+        x: cursorPosition.x - cursorSize * 3.5, // Position to center the blob
+        y: cursorPosition.y - cursorSize * 3.5, // Position to center the blob
       }}
-    /> */}
+      transition={{
+        type: "spring", // Smooth, natural movement
+        stiffness: 100, // Controls the "tightness" of the spring
+        damping: 20,// Controls how much it slows down
+        restDelta: 0.1, // When the movement is considered "finished"
+      }}
+    />
   </div>
   );
 }
