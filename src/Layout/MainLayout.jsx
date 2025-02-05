@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function BackgroundDots() {
+  
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ container: ref });
 
@@ -35,10 +36,13 @@ function BackgroundDots() {
   );
 }
 
+
+
+
 function CustomCursor() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  // Update cursor position
+  // Track mouse movement
   useEffect(() => {
     const handleMouseMove = (e) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
@@ -47,42 +51,66 @@ function CustomCursor() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+
   return (
+    <div className="fixed w-screen h-screen">
+    {/* Blob moves with the cursor */}
     <motion.div
-      className="custom-cursor"
+      className="fixed"
       style={{
-        position: "fixed",
-        top: cursorPosition.y,
-        left: cursorPosition.x,
-        width: "20px",  // Cursor dot size
-        height: "20px", // Cursor dot size
-        backgroundColor: "rgba(79, 240, 183, 0.6)",  // Cursor color
-        borderRadius: "50%",  // Round shape
-        pointerEvents: "none", // Prevent cursor from interacting with elements
-        transform: "translate(-50%, -50%)", // Center the cursor
-        zIndex: 9999, // Ensure the cursor is always on top
-        filter: "blur(2px)", // Apply slight blur effect to the dot
-        transition: "all 0.15s ease", // Smooth animation for cursor movement
-        boxShadow: "0 0 10px rgba(79, 240, 183, 0.6)", // Shadow for glowing effect
+        width: "10px",
+        height: "10px",
+        backgroundColor: "rgba(79, 240, 183, 0.4)", // Soft green glow
+        borderRadius: "50%",
+        position: "absolute",
+        top: cursorPosition.y - 75, // Offset to center blob around cursor
+        left: cursorPosition.x - 75,
+        filter: "blur(30px)", // Glowing effect
+        pointerEvents: "none",
       }}
+      animate={{ x: cursorPosition.x - window.innerWidth / 2, y: cursorPosition.y - window.innerHeight / 2 }}
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
     />
+
+    {/* Pointer stays at the exact center of the blob */}
+    {/* <motion.div
+      className="fixed"
+      style={{
+        width: "10px",
+        height: "10px",
+        backgroundColor: "white", // Pointer color
+        borderRadius: "50%", // Small dot
+        position: "absolute",
+        top: cursorPosition.y - 5, // Centering pointer
+        left: cursorPosition.x - 5,
+        zIndex: 10, // Above the blob
+      }}
+    /> */}
+  </div>
   );
 }
 
+
+
+
+
+
 function MainLayout() {
+
+  const [openMenu, setMenu] = useState(false)
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      <Navbar openMenu={openMenu} setMenu={setMenu}   />
 
       {/* Background Dot Effect */}
       <BackgroundDots />
       
       {/* Custom Cursor */}
-      {/* <CustomCursor /> */}
+      <CustomCursor />
 
       {/* Content */}
-      <div className="main-layout">
+      <div onClick={() => setMenu(false)} className="main-layout">
         <Outlet />
         <Footer />
       </div>

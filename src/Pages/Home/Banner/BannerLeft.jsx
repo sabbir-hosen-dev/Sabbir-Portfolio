@@ -26,7 +26,7 @@ function BannerLeft() {
           <span className="text-[#16f2b3]"> MERN Stack Developer</span>.
         </motion.h1>
 
-        <motion.div
+       <motion.div
           className="my-4 flex items-center gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -76,7 +76,7 @@ function BannerLeft() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <motion.a
+          {/* <motion.a
             className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
             href="#contact"
             whileHover={{ scale: 1.05 }}
@@ -94,10 +94,10 @@ function BannerLeft() {
                 <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM20 17H24V19H20V17ZM17 12H24V14H17V12ZM19 7H24V9H19V7Z"></path>
               </svg>
             </button>
-          </motion.a>
+          </motion.a> */}
 
           <motion.a
-            className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+            className="flex mt-5 items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
             role="button"
             target="_blank"
             rel="noopener noreferrer"
