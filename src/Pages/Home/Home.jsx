@@ -1,5 +1,5 @@
 
-import SkillsSection from '../../Components/Test/Test';
+// import SkillsSection from '../../Components/Test/Test';
 import AboutMe from './AboutMe/AboutMe';
 import Banner from './Banner/Banner';
 import Contact from './ContactMe/ContactMe';
@@ -13,7 +13,7 @@ function Home() {
       <Banner />
       <AboutMe />
       <Skills />
-        <SkillsSection />
+        {/* <SkillsSection /> */}
       <Projects />
       <Contact />
     </div>  
