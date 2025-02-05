@@ -1,7 +1,5 @@
-// import FeaturedProjects from '../../Components/Projects/FearuredProjects';
-// import ProjectsT from '../../Components/Projects/Projdects';
 
-// import Featured from '../../Components/Test/Test';
+import SkillsSection from '../../Components/Test/Test';
 import AboutMe from './AboutMe/AboutMe';
 import Banner from './Banner/Banner';
 import Contact from './ContactMe/ContactMe';
@@ -15,9 +13,7 @@ function Home() {
       <Banner />
       <AboutMe />
       <Skills />
-      {/* <Featured /> */}
-      {/* <FeaturedProjects /> */}
-      {/* <ProjectsT /> */}
+        <SkillsSection />
       <Projects />
       <Contact />
     </div>  

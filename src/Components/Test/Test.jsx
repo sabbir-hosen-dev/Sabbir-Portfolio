@@ -1,194 +1,56 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import React from "react";
 import { motion } from "framer-motion";
 
-const projects = [
-  {
-    id: 1,
-    name: "Rent A Car",
-    tools: ["React", "Tailwind CSS", "DaisyUI", "Node.js", "MongoDB"],
-    description: "A modern car rental platform that allows users to browse, book, and manage car rentals efficiently.",
-    features: [
-      "Browse and search for available cars",
-      "Secure online booking system",
-      "User dashboard to manage bookings",
-      "Admin panel for managing cars and reservations"
-    ],
-    image: "https://i.ibb.co/LYLpwPV/image.png",
-    githubLink: "https://github.com/sabbir-hosen-dev",
-    liveLink: "https://rent-car-881ec.web.app/"
-  },
-  {
-    id: 2,
-    name: "playRev",
-    tools: ["React", "Express", "MongoDB", "Tailwind CSS"],
-    description: "A dynamic news website that provides real-time updates on various topics.",
-    image: "https://i.ibb.co/6J9tp5n/image.png",
-    githubLink: "https://github.com/sabbir-hosen-dev",
-    liveLink: "https://playrev-8d039.web.app/"
-  },
-  {
-    id: 3,
-    name: "Coffee House",
-    tools: ["React", "Tailwind CSS", "Firebase"],
-    description: "A stylish coffee shop website where customers can explore the menu, place orders, and learn more about coffee culture.",
-    features: [
-      "Interactive menu with filtering options",
-      "Online ordering and payment integration",
-      "Blog section for coffee lovers",
-      "Customer reviews and ratings"
-    ],
-    image: "https://i.ibb.co/6sVNzYL/image.png",
-    githubLink: "https://github.com/sabbir-hosen-dev/coffee-house",
-    liveLink: "https://coffee-house277.netlify.app/"
-  }
+const skills = [
+  { id: 1, img: "https://img.icons8.com/color/48/000000/html-5.png", title: "HTML" },
+  { id: 2, img: "https://img.icons8.com/color/48/000000/css3.png", title: "CSS" },
+  { id: 3, img: "https://img.icons8.com/color/48/000000/javascript.png", title: "JavaScript" },
+  { id: 4, img: "https://img.icons8.com/color/48/000000/tailwindcss.png", title: "Tailwind CSS" },
+  { id: 5, img: "https://img.icons8.com/color/48/000000/bootstrap.png", title: "Bootstrap" },
+  { id: 6, img: "https://img.icons8.com/color/48/000000/react-native.png", title: "React" },
+  { id: 7, img: "https://img.icons8.com/color/48/000000/mongodb.png", title: "MongoDB" },
+  { id: 8, img: "https://img.icons8.com/color/48/000000/firebase.png", title: "Firebase" },
+  { id: 9, img: "https://img.icons8.com/color/48/000000/redux.png", title: "Redux" },
+  { id: 10, img: "https://img.icons8.com/color/48/000000/git.png", title: "Git" },
+  { id: 11, img: "https://img.icons8.com/color/48/000000/figma.png", title: "Figma" },
+  { id: 12, img: "https://img.icons8.com/color/48/000000/visual-studio-code-2019.png", title: "VS Code" },
+  { id: 13, img: "https://img.icons8.com/color/48/000000/material-ui.png", title: "Material UI" }
 ];
 
-const Featured = () => {
+const SkillsSection = () => {
   return (
-    <section id="projects" className="py-16">
-      <div className="wrap mx-auto px-6">
-        <motion.h2
-          className="text-3xl font-bold text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.5 }} // Trigger animation when 50% of the element is in view
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.8 }} 
+      className="relative overflow-hidden py-20"
+    >
+      {/* Blurred Background */}
+      <div className="absolute inset-0 bg-[url('/path/to/your/background-image.jpg')] bg-cover bg-center blur-sm opacity-20 -z-10"></div>
+
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">My Skills</h2>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
         >
-          Some Things I’ve Built
-        </motion.h2>
-
-        <div className="flex flex-col gap-16">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                x: index % 2 === 0 ? -50 : 50, // Subtle initial offset
-                y: 0,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.2,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, amount: 0.5 }} // Trigger animation when 50% of the element is in view
-              className={`flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} gap-6 items-center`}
+          {skills.map((skill) => (
+            <motion.div 
+              key={skill.id} 
+              className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md rounded-lg p-4 w-24 h-24 shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              {/* Left Side (Card Content) */}
-              <motion.div
-                className="flex-1 space-y-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.3 }}
-                viewport={{ once: true, amount: 0.5 }}
-              >
-                {/* Heading Animation */}
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.4 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  className="text-sm text-green-400 uppercase"
-                >
-                  Featured Project
-                </motion.p>
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.5 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  className="text-2xl font-semibold"
-                >
-                  {project.name}
-                </motion.h3>
-                {/* Description */}
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.6 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  className="bg-gray-800 p-4 rounded-lg text-gray-300"
-                >
-                  {project.description}
-                </motion.p>
-                {/* Tools Animation */}
-                <motion.ul
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.7 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  className="flex flex-wrap gap-3"
-                >
-                  {project.tools.map((tech, i) => (
-                    <motion.li
-                      key={i}
-                      whileHover={{ scale: 1.1, backgroundColor: "#4ADE80" }}
-                      transition={{ duration: 0.2 }}
-                      className="bg-green-400/20 px-3 py-1 rounded-md text-sm text-green-300 cursor-pointer"
-                    >
-                      {tech}
-                    </motion.li>
-                  ))}
-                </motion.ul>
-                {/* Links (Github & Live Link) */}
-                <div className="flex gap-4 mt-2">
-                  {project.githubLink && (
-                    <motion.a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, color: "#FFFFFF" }}
-                      transition={{ duration: 0.2 }}
-                      className="text-green-400 text-2xl hover:text-white transition"
-                    >
-                      <FaGithub />
-                    </motion.a>
-                  )}
-                  {project.liveLink && (
-                    <motion.a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, color: "#FFFFFF" }}
-                      transition={{ duration: 0.2 }}
-                      className="text-green-400 text-2xl hover:text-white transition"
-                    >
-                      <FaExternalLinkAlt />
-                    </motion.a>
-                  )}
-                </div>
-              </motion.div>
-
-              {/* Right Side (Image & Hover Effects) */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.3 }}
-                viewport={{ once: true, amount: 0.5 }}
-                className="flex-1"
-              >
-                <a href={project.liveLink || project.githubLink} target="_blank" rel="noopener noreferrer">
-                  <motion.img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full rounded-lg shadow-lg"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </a>
-              </motion.div>
+              <img src={skill.img} alt={skill.title} className="w-10 h-10 mb-2" />
+              <p className="text-xs font-medium text-white text-center">{skill.title}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };
 
-export default Featured;
+export default SkillsSection;

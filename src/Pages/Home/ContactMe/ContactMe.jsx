@@ -39,9 +39,6 @@ const Contact = () => {
     if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Please provide a valid email.";
     }
-    if (message.split(" ").length < 5) {
-      newErrors.message = "Message must be at least 5 words.";
-    }
 
     setErrors(newErrors);
 
