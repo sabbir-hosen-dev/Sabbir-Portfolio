@@ -11,34 +11,30 @@ function BannerLeft() {
         className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10"
         initial={{ opacity: 0, y: -30 }} // Initial opacity and position
         animate={{ opacity: 1, y: 0 }} // Animate to full opacity and normal position
-        transition={{ duration: 1, delay: 0.2 }}
-      >
+        transition={{ duration: 1, delay: 0.2 }}>
         <motion.h1
           className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]"
           initial={{ opacity: 0, x: -50 }} // Initial position and opacity
           animate={{ opacity: 1, x: 0 }} // Animate to final position
-          transition={{ duration: 1, delay: 0.3 }}
-        >
+          transition={{ duration: 1, delay: 0.3 }}>
           Hello, <br />
           I&apos;m <span className="text-pink-500">
             Sabbir Hosen
-          </span> <br />  A Passionate 
+          </span> <br /> A Passionate
           <span className="text-[#16f2b3]"> MERN Stack Developer</span>.
         </motion.h1>
 
-       <motion.div
+        <motion.div
           className="my-4 flex items-center gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
+          transition={{ duration: 1, delay: 0.4 }}>
           <motion.a
             target="_blank"
             rel="noopener noreferrer"
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://github.com/sabbir-hosen-dev"
-            whileHover={{ scale: 1.1 }}
-          >
+            whileHover={{ scale: 1.1 }}>
             <AiFillGithub className="text-4xl" />
           </motion.a>
           <motion.a
@@ -46,8 +42,7 @@ function BannerLeft() {
             rel="noopener noreferrer"
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://www.linkedin.com/in/sabbir-hosen-dev/"
-            whileHover={{ scale: 1.1 }}
-          >
+            whileHover={{ scale: 1.1 }}>
             <AiFillLinkedin className="text-4xl" />
           </motion.a>
           <motion.a
@@ -55,8 +50,7 @@ function BannerLeft() {
             rel="noopener noreferrer"
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://www.linkedin.com/in/sabbir-hosen-dev/"
-            whileHover={{ scale: 1.1 }}
-          >
+            whileHover={{ scale: 1.1 }}>
             <BsFacebook className="text-4xl" />
           </motion.a>
           <motion.a
@@ -64,8 +58,7 @@ function BannerLeft() {
             rel="noopener noreferrer"
             className="transition-all text-pink-500 hover:scale-125 duration-300"
             href="https://wa.me/+8801313530719"
-            whileHover={{ scale: 1.1 }}
-          >
+            whileHover={{ scale: 1.1 }}>
             <BsWhatsapp className="text-4xl" />
           </motion.a>
         </motion.div>
@@ -74,8 +67,7 @@ function BannerLeft() {
           className="flex items-center gap-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
+          transition={{ duration: 1, delay: 0.5 }}>
           {/* <motion.a
             className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
             href="#contact"
@@ -95,15 +87,14 @@ function BannerLeft() {
               </svg>
             </button>
           </motion.a> */}
-
           <motion.a
             className="flex mt-5 items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
             role="button"
-            target="_blank"
+
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1HeWJ0vNGGUPAl6iU03JJs6qIApBimSy9/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1HeWJ0vNGGUPAl6iU03JJs6qIApBimSy9"
             whileHover={{ scale: 1.05 }}
-          >
+            download>
             <span>Get Resume</span>
             <svg
               stroke="currentColor"
