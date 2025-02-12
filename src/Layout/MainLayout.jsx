@@ -62,7 +62,7 @@ function CustomCursor() {
       style={{
         width: `${cursorSize * 2}px`, // Blob size
         height: `${cursorSize * 2}px`,
-        backgroundColor: "rgba(79, 240, 183, 0.7)", // Soft green glow
+        backgroundColor: "rgba(123, 57, 235, 1)", // Soft green glow
         borderRadius: "50%",
         position: "absolute",
         filter: "blur(80px)", // Glowing effect
@@ -93,6 +93,8 @@ function MainLayout() {
   const [openMenu, setMenu] = useState(false)
   return (
     <>
+
+{/* <div className="absolute -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 " style="transform: translate(306.1px, 13.6121px); transition: transform 1.4s ease-out;"></div> */}
       {/* Navbar */}
       <Navbar openMenu={openMenu} setMenu={setMenu}   />
 

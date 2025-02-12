@@ -9,6 +9,25 @@ import Heading from '../../../Components/Heading/Heading';
 
 const projects = [
   {
+    id: 2,
+    name: 'SkyFlow - Building Management System',
+    tools: ['React', 'Tailwind CSS', 'DaisyUI', 'Node.js', 'MongoDB', 'TanStack Query', 'JWT'],
+    description:
+      'A comprehensive building management system for residents, members, and admins to manage apartments, payments, and announcements efficiently.',
+    features: [
+      'Role-based dashboard for users, members, and admins',
+      'Apartment management system',
+      'Secure authentication with JWT',
+      'Payment processing with coupon management',
+      'Real-time announcements and notifications',
+      'Dark mode support',
+    ],
+    image: 'https://i.ibb.co.com/jPMqXp4B/skyflow.png',
+    githubLink: 'https://github.com/sabbir-hosen-dev/Sky_Flow_Clint',
+    liveLink: 'https://skyflow-277.web.app/',
+  }
+,  
+  {
     id: 1,
     name: 'Rent A Car',
     tools: ['React', 'Tailwind CSS', 'DaisyUI', 'Node.js', 'MongoDB'],
